@@ -35,6 +35,7 @@ function App() {
         // --- Handle/Cutout Position ---
         // For Door_05, Door_06: Vertical position of handle from the bottom
         cutYPosition={400}
+        // cutHeightDM={100}
         // --- Animation and View ---
         doorPivot="right"
         doorOpening="in"
