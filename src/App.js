@@ -6,7 +6,7 @@ import { DoorSing } from "doorsing_models";
 function App() {
   const doorMaterials = {
     doorMaterial: "#C0C0C0",
-    frameMaterial: { value: "#ff0000", opacity: 1 },
+    cutoutMaterial: { value: "#ff0000", opacity: 1 },
   };
 
   return (
@@ -22,23 +22,16 @@ function App() {
       <DoorSing
         cpid="Door_04"
         materials={doorMaterials}
-        // --- General Dimensions ---
-        width={800}
-        height={2200}
-        // --- Model-Specific Dimensions ---
-        // For Door_04, Door_05, Door_06:
-        depth={25}
-        // For Door_02, Door_03:
-        // frontDepth={12}
-        // backDepth={15}
-
-        // --- Handle/Cutout Position ---
-        // For Door_05, Door_06: Vertical position of handle from the bottom
-        cutYPosition={400}
-        // cutHeightDM={100}
-        // --- Animation and View ---
-        doorPivot="right"
-        doorOpening="in"
+        // doorPivot={"left"}
+        // doorOpening={"in"}
+        // width={500}
+        // height={2000}
+        // depth={200}
+        // frontDepth={10}
+        // backDepth={12}
+        // cutYPosition={300}
+        // cutHeightDM={400}
+        // position={[0, 0, 0]}
       />
       <OrbitControls makeDefault />
     </Canvas>
