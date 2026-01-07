@@ -2,11 +2,26 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { DoorSing } from "doorsing_models";
+import { Material } from "three";
+import * as THREE from "three";
+import { useLoader } from "@react-three/fiber";
 
 function App() {
+  const texture = useLoader(
+    THREE.TextureLoader,
+    "https://cdn.polyhaven.com/asset_img/primary/wood_floor.png"
+  );
+
   const doorMaterials = {
-    doorMaterial: "#C0C0C0",
-    cutoutMaterial: { value: "#ff0000", opacity: 1 },
+    doorMaterial: new THREE.MeshStandardMaterial({
+      map: texture,
+      roughness: 0.8,
+    }),
+    cutoutMaterial: new THREE.MeshStandardMaterial({
+      color: "#999555",
+      roughness: 0.2,
+      metalness: 0.5,
+    }),
   };
 
   return (
@@ -21,7 +36,7 @@ function App() {
       {/* DoorSing Model */}
       <group scale={0.1}>
         <DoorSing
-          cpid="Door_05"
+          cpid="Door_04"
           materials={doorMaterials}
           // doorPivot={"left"}
           // doorOpening={"in"}
@@ -30,8 +45,8 @@ function App() {
           // depth={200}
           // frontDepth={10}
           // backDepth={12}
-          // cutYPosition={300}
-          // cutHeightDM={400}
+          // cutYPosition={400}
+          // cutHeightDM={500}
           // position={[0, 0, 0]}
         />
       </group>
