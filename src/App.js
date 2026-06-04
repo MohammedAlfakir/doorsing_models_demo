@@ -12,7 +12,7 @@ function App() {
         roughness: 0.8,
         // metalness: 0.1,
       }),
-    []
+    [],
   );
 
   const handlerMaterial = React.useMemo(
@@ -22,7 +22,7 @@ function App() {
         // roughness: 0.2,
         // metalness: 0.5,
       }),
-    []
+    [],
   );
 
   return (
@@ -41,12 +41,12 @@ function App() {
         <Suspense fallback={null}>
           <group scale={0.1}>
             <SpecialKms
-              cpid="Door_FA_4a"
+              cpid="Door_FA_4b"
               width={500}
               height={2200}
               depth={18}
-              // frontDepth={3}
-              // backDepth={3}
+              frontDepth={10}
+              backDepth={10}
               // cutYPosition={0}
               doorPivot="left"
               doorOpening="in"
@@ -71,6 +71,7 @@ function App() {
                 // rotationY: 0,
                 // handlerHeight: 130,
                 handlerMaterial: handlerMaterial,
+                // secondCutHeight: 50,
               }}
               // doorCutsParam={{
               //   width: 40,
