@@ -5,15 +5,16 @@ import * as THREE from "three";
 import { SpecialKms } from "@oak-some/special-kms";
 
 function App() {
-  const doorMaterial = React.useMemo(
-    () =>
-      new THREE.MeshStandardMaterial({
-        color: "#ffffff",
-        roughness: 0.8,
-        // metalness: 0.1,
-      }),
-    [],
-  );
+  const doorMaterial = React.useMemo(() => {
+    const texture = new THREE.TextureLoader().load(
+      "https://imagedelivery.net/aYYmWUcv7lRhpLdU4ojPsA/copy_2%2FUN_0H266_V1A.jpg/public",
+    );
+    return new THREE.MeshStandardMaterial({
+      map: texture,
+      roughness: 0.8,
+      // metalness: 0.1,
+    });
+  }, []);
 
   const handlerMaterial = React.useMemo(
     () =>
