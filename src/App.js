@@ -9,15 +9,10 @@ function App() {
     const texture = new THREE.TextureLoader().load(
       "https://imagedelivery.net/aYYmWUcv7lRhpLdU4ojPsA/copy_2%2FUN_0H266_V1A.jpg/public",
     );
-
-    texture.colorSpace = THREE.SRGBColorSpace;
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(3, 3); // tile 3x horizontally and vertically
-
     return new THREE.MeshStandardMaterial({
       map: texture,
       roughness: 0.8,
+      // metalness: 0.1,
     });
   }, []);
 
