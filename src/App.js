@@ -19,7 +19,7 @@ function App() {
   const handlerMaterial = React.useMemo(
     () =>
       new THREE.MeshStandardMaterial({
-        color: "#000000",
+        color: "#ffffff",
         // roughness: 0.2,
         // metalness: 0.5,
       }),
@@ -42,7 +42,7 @@ function App() {
         <Suspense fallback={null}>
           <group scale={0.1}>
             <SpecialKms
-              cpid="Door_FA_4b"
+              cpid="Door_FA_1"
               width={500}
               height={2200}
               depth={18}
@@ -64,7 +64,7 @@ function App() {
               }}
               handler={{
                 cpid: "HL01",
-                // xPosition: 0,
+                xPosition: 240,
                 // yPosition: 300,
                 // zPosition: 0,
                 // rotation: 0,
@@ -81,7 +81,7 @@ function App() {
               // }}
 
               edgeLine={{
-                color: "#ff0000",
+                color: "#000000",
                 opacity: 0.5,
                 lineWidth: 2,
               }}
