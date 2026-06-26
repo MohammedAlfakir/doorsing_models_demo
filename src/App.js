@@ -79,6 +79,12 @@ function App() {
               //   numberOfCuts: 3,
               //   segmentWidth: 10,
               // }}
+
+              edgeLine={{
+                color: "#ff0000",
+                opacity: 0.5,
+                lineWidth: 2,
+              }}
             />
           </group>
         </Suspense>

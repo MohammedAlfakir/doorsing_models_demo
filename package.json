@@ -6,7 +6,7 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@mui/material": "^7.0.0",
-    "@oak-some/special-kms": "^1.0.5",
+    "@oak-some/special-kms": "^1.0.8",
     "@react-spring/three": "^10.0.3",
     "@react-three/csg": "^4.0.0",
     "@react-three/drei": "^10.7.7",
