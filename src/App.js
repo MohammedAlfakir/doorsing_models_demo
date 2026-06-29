@@ -42,7 +42,7 @@ function App() {
         <Suspense fallback={null}>
           <group scale={0.1}>
             <SpecialKms
-              cpid="Door_FA_1"
+              cpid="Door_FA_8"
               width={500}
               height={2200}
               depth={18}
@@ -63,7 +63,7 @@ function App() {
                 // backMaterial: "#cccccc",
               }}
               handler={{
-                cpid: "HL01",
+                cpid: "NONE",
                 xPosition: 240,
                 // yPosition: 300,
                 // zPosition: 0,
