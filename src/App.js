@@ -29,14 +29,21 @@ function App() {
   return (
     <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
       <Canvas camera={{ position: [0, 0, 300], fov: 50 }} shadows>
-        <ambientLight intensity={1} />
+        <ambientLight intensity={0.4} />
         <directionalLight
-          position={[0, 5, 5]}
-          intensity={1.5}
+          position={[100, 200, 150]}
+          intensity={2}
           shadow-bias={-0.0001}
+          shadow-mapSize={[2048, 2048]}
+          shadow-camera-near={10}
+          shadow-camera-far={600}
+          shadow-camera-left={-200}
+          shadow-camera-right={200}
+          shadow-camera-top={300}
+          shadow-camera-bottom={-100}
           castShadow
         />
-        <directionalLight position={[-5, -5, -5]} intensity={0.5} />
+        <directionalLight position={[-100, 50, -100]} intensity={0.4} />
         <OrbitControls />
 
         <Suspense fallback={null}>
@@ -81,13 +88,25 @@ function App() {
               // }}
 
               edgeLine={{
+                enabled: true,
                 color: "#000000",
                 opacity: 0.5,
                 lineWidth: 2,
               }}
+              shadow={true}
             />
           </group>
         </Suspense>
+
+        {/* Shadow-receiving floor plane */}
+        <mesh
+          rotation={[-Math.PI / 2, 0, 0]}
+          position={[0, -110, 0]}
+          receiveShadow
+        >
+          <planeGeometry args={[600, 600]} />
+          <shadowMaterial opacity={0.35} />
+        </mesh>
       </Canvas>
     </div>
   );
