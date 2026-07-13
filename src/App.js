@@ -49,7 +49,7 @@ function App() {
         <Suspense fallback={null}>
           <group scale={0.1}>
             <SpecialKms
-              cpid="Door_FA_8"
+              cpid="Door_FA_3"
               width={500}
               height={2200}
               depth={18}
@@ -70,7 +70,7 @@ function App() {
                 // backMaterial: "#cccccc",
               }}
               handler={{
-                cpid: "NONE",
+                cpid: "None",
                 xPosition: 240,
                 // yPosition: 300,
                 // zPosition: 0,
@@ -86,7 +86,8 @@ function App() {
               //   numberOfCuts: 3,
               //   segmentWidth: 10,
               // }}
-
+              numberOfCuts={4}
+              segmentWidth={90}
               edgeLine={{
                 enabled: true,
                 color: "#000000",
