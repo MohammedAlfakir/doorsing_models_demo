@@ -49,7 +49,7 @@ function App() {
         <Suspense fallback={null}>
           <group scale={0.1}>
             <SpecialKms
-              cpid="Door_FA_3"
+              cpid="Door_FA_4a"
               width={500}
               height={2200}
               depth={18}
@@ -68,6 +68,7 @@ function App() {
                 doorMaterial: doorMaterial,
                 // frontMaterial: "#eeeeee",
                 // backMaterial: "#cccccc",
+                innerPanelMaterial: "#000000",
               }}
               handler={{
                 cpid: "None",
