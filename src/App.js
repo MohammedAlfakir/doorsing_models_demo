@@ -65,7 +65,7 @@ function App() {
               // debugEdges={false}
               position={[0, 0, 0]}
               materials={{
-                doorMaterial: doorMaterial,
+                //doorMaterial: doorMaterial,
                 // frontMaterial: "#eeeeee",
                 // backMaterial: "#cccccc",
                 innerPanelMaterial: "#000000",
